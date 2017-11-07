@@ -77,9 +77,10 @@ function total() {
   for (var elem in cart) {
     for (var key in cart[elem]) {
       total += cart[elem][key];
+      console.log(cart[elem][key]);
     }
   }
-  console.log(key);
+  console.log(cart[elem][key]);
 }
 
 function removeFromCart(item) {
