@@ -65,10 +65,10 @@ function viewCart() {
       }
     }
     for (var variable in final) {
-      final = final[variable];
+      var fin = final[variable];
     }
-    
-    console.log(final);
+
+    console.log(fin);
   }
 
 }
