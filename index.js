@@ -83,14 +83,15 @@ function total() {
 }
 
 function removeFromCart(item) {
-if (item in cart) {
-  delete cart.item;
-} else {
-  console.log("That item is not in your cart.");
-
-}
+  for (var i in cart) {
+    if (cart[i].item !== 'undefined') {
+      cart.splice(i,1);
+    }
+    else {
+      console.log("That item is not in your cart.");
+    }
+  }
   return cart;
-
 }
 
 function placeOrder(cardNumber) {
