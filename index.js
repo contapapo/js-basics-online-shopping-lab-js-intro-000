@@ -96,11 +96,12 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
+  var tot = 0;
   if (cardNumber === 'undefined') {
     console.log("Sorry, we don't have a credit card on file for you.");
   } else {
-    var tot = total();
+    tot = total();
     console.log(`Your total cost is $${tot}, which will be charged to the card ${cardNumber}.`);
-    cart = [];
+    //cart = [];
   }
 }
