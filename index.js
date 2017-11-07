@@ -89,7 +89,7 @@ if (!cart.item) {
   delete cart.item;
 }
   return cart;
-  
+
 }
 
 function placeOrder(cardNumber) {
