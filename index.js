@@ -73,11 +73,11 @@ function viewCart() {
 }
 
 function total() {
-  var total;
+  var total = 0;
   for (var elem in cart) {
     for (var key in cart[elem]) {
-      total = total + cart[elem][key];
-      console.log(cart[elem][key]);
+      total += cart[elem][key];
+      //console.log(cart[elem][key]);
     }
   }
   console.log(total);
