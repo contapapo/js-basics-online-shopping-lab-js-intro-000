@@ -1,4 +1,5 @@
 var cart = [];
+var final = 0;
 
 function getCart() {
  return cart;
@@ -73,13 +74,13 @@ function viewCart() {
 }
 
 function total() {
-  var total = 0;
+  
   for (var elem in cart) {
     for (var key in cart[elem]) {
-      total += cart[elem][key];
+      final += cart[elem][key];
     }
   }
-  return total;
+  return final;
 }
 
 function removeFromCart(item) {
