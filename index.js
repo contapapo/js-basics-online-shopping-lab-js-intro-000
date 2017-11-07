@@ -64,7 +64,7 @@ function viewCart() {
         final.push(` and ${liste[i]}.`);
       }
     }
-    
+
     console.log(final.split(","));
   }
 
