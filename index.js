@@ -64,6 +64,9 @@ function viewCart() {
         final.push(` and ${liste[i]}.`);
       }
     }
+    var tot = for (var variable in final) {
+      final[variable];
+    }
     console.log(final);
   }
 
