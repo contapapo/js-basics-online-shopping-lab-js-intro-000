@@ -74,7 +74,7 @@ function viewCart() {
 }
 
 function total() {
-
+  final_price = 0;
   for (var elem in cart) {
     for (var key in cart[elem]) {
       final_price += cart[elem][key];
