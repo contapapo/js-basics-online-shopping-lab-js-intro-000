@@ -24,6 +24,7 @@ function addToCart(item) {
 
 function viewCart() {
   var liste = [];
+  var final = [];
 
   if (cart.length === 0) {
     console.log("Your shopping cart is empty.");
@@ -52,9 +53,18 @@ function viewCart() {
         liste.push(`${key} at $${cart[elem][key]}`)
       }
     }
-    while (var i > liste.length-1) {
-      
+    for (var i = 0; i < liste.length; i++) {
+      while (i === 0) {
+        final.push(`In your cart, you have ${liste[i]}`);
+      } 
+      while (i > 0 && i < liste.length-1){
+        final.push(`, ${liste[i]}`);
+      }
+      while (i === liste.length-1) {
+        final.push(` and ${liste[i]}.`);
+      }
     }
+    console.log(final);
   }
 
 }
