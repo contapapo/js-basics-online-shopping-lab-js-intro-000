@@ -10,19 +10,68 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+
+  var rand = Math.random() * 100;
+  var price = Math.floor(rand);
+
+  var product = {[item]:price};
+  cart.push(product);
+
+  console.log(`${item} has been added to your cart.`);
+
+  return cart;
 }
 
 function viewCart() {
-  // write your code here
+  var liste = [];
+
+  if (cart.length === 0) {
+    console.log("Your shopping cart is empty.");
+  }
+
+  else if (cart.length === 1) {
+    for (var elem in cart) {
+      for (var key in cart[elem]) {
+        console.log(`In your cart, you have ${key} at $${cart[elem][key]}.`);
+        }
+      }
+    }
+
+  else if (cart.length === 2){
+    for (var elem in cart) {
+      for (var key in cart[elem]) {
+        liste.push(`${key} at $${cart[elem][key]}`)
+      }
+    }
+    console.log(`In your cart, you have ${liste[0]} and ${liste[1]}.`);
+  }
+
+  else {
+    for (var elem in cart) {
+      for (var key in cart[elem]) {
+        liste.push(`${key} at $${cart[elem][key]}`)
+      }
+    }
+    while (var i > liste.length-1) {
+      
+    }
+  }
+
 }
 
 function total() {
-  // write your code here
+  var total;
+  for (var elem in cart) {
+    for (var key in cart[elem]) {
+      total += cart[elem][key];
+    }
+  }
+  console.log(total);
 }
 
 function removeFromCart(item) {
-  // write your code here
+  delete cart.item;
+  console.log("That item is not in your cart.");
 }
 
 function placeOrder(cardNumber) {
