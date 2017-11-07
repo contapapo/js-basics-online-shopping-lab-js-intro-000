@@ -64,8 +64,10 @@ function viewCart() {
         final.push(` and ${liste[i]}.`);
       }
     }
-
-    console.log(final.split(","));
+    var text = final.reduce(function(ant,atu,index,tudo){
+      return ant + atu;
+    })
+    console.log(text);
   }
 
 }
