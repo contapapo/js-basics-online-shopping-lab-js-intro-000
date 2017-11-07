@@ -83,11 +83,11 @@ function total() {
 }
 
 function removeFromCart(item) {
-if (cart.item) {
+if (item in cart) {
   delete cart.item;
 } else {
   console.log("That item is not in your cart.");
-  
+
 }
   return cart;
 
