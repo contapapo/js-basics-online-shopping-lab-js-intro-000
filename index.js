@@ -1,5 +1,5 @@
 var cart = [];
-var final = 0;
+var final_price = 0;
 
 function getCart() {
  return cart;
@@ -77,10 +77,10 @@ function total() {
 
   for (var elem in cart) {
     for (var key in cart[elem]) {
-      final += cart[elem][key];
+      final_price += cart[elem][key];
     }
   }
-  return final;
+  return final_price;
 }
 
 function removeFromCart(item) {
