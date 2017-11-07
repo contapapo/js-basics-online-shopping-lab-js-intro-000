@@ -80,7 +80,7 @@ function total() {
       //console.log(cart[elem][key]);
     }
   }
-  console.log(total);
+  return total;
 }
 
 function removeFromCart(item) {
