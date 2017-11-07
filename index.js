@@ -64,11 +64,8 @@ function viewCart() {
         final.push(` and ${liste[i]}.`);
       }
     }
-    for (var variable in final) {
-      var fin += final[variable];
-    }
-
-    console.log(fin);
+    
+    console.log(final.split(","));
   }
 
 }
