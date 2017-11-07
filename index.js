@@ -61,7 +61,7 @@ function viewCart() {
         final.push(`, ${liste[i]}`);
       }
       else if (i == liste.length-1) {
-        final.push(` and ${liste[i]}.`);
+        final.push(`, and ${liste[i]}.`);
       }
     }
     var text = final.reduce(function(ant,atu,index,tudo){
