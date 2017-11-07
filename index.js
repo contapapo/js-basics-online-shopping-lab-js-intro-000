@@ -84,7 +84,7 @@ function total() {
 
 function removeFromCart(item) {
   for (var i in cart) {
-    if (cart[i].item !=== 'undefined') {
+    if (cart[i].hasOwnProperty(item)) {
       cart.splice(i,1);
     }
     else {
