@@ -1,5 +1,4 @@
 var cart = [];
-var total = 0;
 
 function getCart() {
  return cart;
