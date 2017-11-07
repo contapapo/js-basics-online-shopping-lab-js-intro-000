@@ -77,15 +77,19 @@ function total() {
   for (var elem in cart) {
     for (var key in cart[elem]) {
       total += cart[elem][key];
-      //console.log(cart[elem][key]);
     }
   }
   return total;
 }
 
 function removeFromCart(item) {
-  delete cart.item;
+if (!cart.item) {
   console.log("That item is not in your cart.");
+} else {
+  delete cart.item;
+}
+  return cart;
+  
 }
 
 function placeOrder(cardNumber) {
