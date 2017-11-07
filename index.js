@@ -79,7 +79,7 @@ function total() {
       total += cart[elem][key];
     }
   }
-  console.log(total);
+  console.log(key);
 }
 
 function removeFromCart(item) {
