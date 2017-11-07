@@ -54,13 +54,13 @@ function viewCart() {
       }
     }
     for (var i = 0; i < liste.length; i++) {
-      while (i === 0) {
+      if (i === 0) {
         final.push(`In your cart, you have ${liste[i]}`);
       }
-      while (i > 0 && i < liste.length-1){
+      else if (i > 0 && i < liste.length-1){
         final.push(`, ${liste[i]}`);
       }
-      while (i === liste.length-1) {
+      else if (i === liste.length-1) {
         final.push(` and ${liste[i]}.`);
       }
     }
