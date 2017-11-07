@@ -65,7 +65,7 @@ function viewCart() {
       }
     }
     for (var variable in final) {
-      var fin = final[variable];
+      var fin += final[variable];
     }
 
     console.log(fin);
